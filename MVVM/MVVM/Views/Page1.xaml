@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:MVVM.ViewModels" x:DataType="viewmodels:Page1ViewModel"
+             x:Class="MVVM.Views.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry BackgroundColor="Black" TextColor="Magenta" FontSize="16" Text="{Binding EntryText}"/>
+            <Label Text="{Binding WelcomeText}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Change Text" Command="{Binding ButtonClickedCommand}" />
+            <Button Text="Change Entry" Command="{Binding ButtonEntryCommand}" />
+            <Button Text="Change Page" Command="{Binding ButtonNextPage}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
